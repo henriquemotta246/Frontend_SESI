@@ -1,0 +1,14 @@
+h1{
+    color: rgb(233, 233, 233);
+}
+body{
+     background-color :#121212;
+    color:#ffffff;
+    font-family: 'Segeo UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    
+}
+
