@@ -1,19 +1,26 @@
 body {
-    background-color:#1a1a1a;
+    background: #020024;
+    background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+    );
+    min-height: 100vh;
     color: #ffffff;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    padding: 20px
 }
 
 .container{
-    width: 400px;
+    height: 60vh;
+    width: 450px;
     background-color: #000000;
     padding: 50px;
     border-radius: 10px;
-    border: 1px solid #ffffff;
-    box-shadow: 0 10px 30px rgb(255, 255, 255);
+    border: 1px solid #000000;
+    box-shadow: 0 10px 30px rgb(4, 0, 255);
 }
 
 h1{

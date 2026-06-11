@@ -11,19 +11,34 @@
     <div class="container">
         <h1>TechStore SESI</h1>
 
-        <section class="formulario">
+        <section class="formulario" style="display: none;">
             <h3>Dados da Venda</h3>
             <input type="text" id="inputNome" placeholder="Nome do cliente">
             <input type="number" id="inputIdade" placeholder="Idade do cliente">
             <input type="number" id="inputValor" placeholder="Valor Total (R$)">
 
-            <select id="inputCupom">
-                <option value="false">Não possui cupom</option>
+              <select id="inputCupom">
+                <option value="false">Não tenho cupom</option>
                 <option value="true">Possui cupom (15% OFF)</option>
             </select>
+            
+            <select id="inputVIP">
+                <option value="false">Não sou cliente VIP</option>
+                <option value="true">Sou cliente VIP</option>
+            </select>
+
+        </section>
+            
+        <section class="formularioVIP">   
+            <h3>Cadastro VIP</h3>
+            <input type="text" id="inputNomeVip" placeholder="Nome do cliente">
+            <input type="number" id="inputcpfVip" placeholder="Idade do cliente">
+            <input type="text" id="inputEmailVip" placeholder="Email">
+            
+         
 
             <button onclick="executarSistema()">Finalizar Venda</button>
-        </section>
+        
         <hr>
         <section>
             <p id="mensagem-autorizacao">preencha os dados acima.</p>
