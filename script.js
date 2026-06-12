@@ -53,3 +53,35 @@ function executarSistema(){
     }
 
 }
+//função para ir pro cadastro vip
+function irCadastrar(){
+
+    const formulario = document.getElementById("form");
+    const cadastro = document.getElementById("cadastro");
+
+    formulario.style.display = "none"
+    cadastro.style.display = "block"
+}
+function voltarFormulario(){
+
+    
+
+    const formulario = document.getElementById("form");
+    const cadastro = document.getElementById("cadastro");
+
+    formulario.style.display = "block"
+    cadastro.style.display = "none"
+}
+
+const formvip=document.getElementById('opcaoVIP');
+let vip = false;
+
+if(vip===true){
+    formvip.disabled= false;
+}
+else{
+    formvip.disabled= true ;
+}
+
+
+

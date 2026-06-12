@@ -1,52 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechStore SESI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>TechStore SESI</h1>
+    <div class = "container">
+        <h1>🛒TechStore SESI💻</h1>
+        
+        <section class = "formulario" id="form" style="display: block;">
+            <h3>Dados da Venda:</h3>
+            <input type="text" id="inputNome" placeholder="Nome do Cliente">
+            <input type="number" id="inputIdade" placeholder="Idade do Cliente">
+            <input type="number" id="inputValor" placeholder="Valor total (R$)">
 
-        <section class="formulario" style="display: none;">
-            <h3>Dados da Venda</h3>
-            <input type="text" id="inputNome" placeholder="Nome do cliente">
-            <input type="number" id="inputIdade" placeholder="Idade do cliente">
-            <input type="number" id="inputValor" placeholder="Valor Total (R$)">
-
-              <select id="inputCupom">
-                <option value="false">Não tenho cupom</option>
-                <option value="true">Possui cupom (15% OFF)</option>
+            <select id="inputCupom">
+                <option value="false">Não possui cupom.</option>
+                <option value="true">Possui cupom(15% OFF).</option>
             </select>
-            
+
             <select id="inputVIP">
-                <option value="false">Não sou cliente VIP</option>
-                <option value="true">Sou cliente VIP</option>
+                <option value="false">Não sou cliente VIP.</option>
+                <option id="opcaoVIP" value="true" disabled>Sou cliente VIP.</option>
             </select>
 
-        </section>
-            
-        <section class="formularioVIP">   
-            <h3>Cadastro VIP</h3>
-            <input type="text" id="inputNomeVip" placeholder="Nome do cliente">
-            <input type="number" id="inputcpfVip" placeholder="Idade do cliente">
-            <input type="text" id="inputEmailVip" placeholder="Email">
-            
-         
+            <button id="trocarPagina" onclick="irCadastrar()">Não é cliente VIP? Clique aqui!</button>
 
             <button onclick="executarSistema()">Finalizar Venda</button>
-        
-        <hr>
-        <section>
-            <p id="mensagem-autorizacao">preencha os dados acima.</p>
-            <ul id="lista-estoque"></ul>
-            <div id="relatorio-final" class="card" style="display: none;"></div>
+
         </section>
+
+        <section class="cadastrovip" id="cadastro" style="display: none">
+
+            <h3 id="tituloCadastro">💎Cadastro Vip💎:</h3>
+            <input type="text" id="nomevip" placeholder="Nome do Cliente">
+            <input type="number" id="idadevip" placeholder="Idade do Cliente">
+            <input type="text" id="emailvip" placeholder="Email do Cliente">
+            <input type="number" id="cpfvip" placeholder="CPF do Cliente">
+
+            <button id="trocarPagina" onclick="voltarFormulario()" id="botaoVoltar">Não deseja se cadastrar? Clique aqui!</button>
+
+            <button onclick="executarCadastro()" id="botaoCadastro">Cadastrar</button>
+
+        </section>
+
+        <hr>
+
+        <section id="feedback">
+            <p id="mensagem-autorizacao">Preencha os dados acima.</p>
+            <ul id="lista-estoque"></ul>
+            <div id="relatorio-final" class = "card" style="display: none;">
+
+            </div>
+
+        </section>
+
     </div>
-    <script src="script.js"></script>
-   
+
+    <script src="script.js"></script>    
 </body>
 </html>
+
+
