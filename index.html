@@ -4,63 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechStore SESI</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "container">
-        <h1>🛒TechStore SESI💻</h1>
-        
-        <section class = "formulario" id="form" style="display: block;">
-            <h3>Dados da Venda:</h3>
-            <input type="text" id="inputNome" placeholder="Nome do Cliente">
-            <input type="number" id="inputIdade" placeholder="Idade do Cliente">
-            <input type="number" id="inputValor" placeholder="Valor total (R$)">
 
-            <select id="inputCupom">
-                <option value="false">Não possui cupom.</option>
-                <option value="true">Possui cupom(15% OFF).</option>
-            </select>
+<div class="container">
 
-            <select id="inputVIP">
-                <option value="false">Não sou cliente VIP.</option>
-                <option id="opcaoVIP" value="true" disabled>Sou cliente VIP.</option>
-            </select>
+    <h1>🛒 TechStore SESI 💻</h1>
 
-            <button id="trocarPagina" onclick="irCadastrar()">Não é cliente VIP? Clique aqui!</button>
+    <section class="formulario" id="form">
 
-            <button onclick="executarSistema()">Finalizar Venda</button>
+        <h3>Dados da Venda:</h3>
 
+        <input type="text" id="inputNome" placeholder="Nome do Cliente">
+
+        <input type="number" id="inputIdade" placeholder="Idade do Cliente">
+
+        <input type="number" id="inputValor" placeholder="Valor total (R$)">
+
+        <select id="inputCupom">
+            <option value="false">Não possui cupom</option>
+            <option value="true">Possui cupom (15% OFF)</option>
+        </select>
+
+        <select id="inputVIP">
+            <option value="false">Cliente comum</option>
+            <option id="opcaoVIP" value="true" disabled>
+                💎 Cliente VIP
+            </option>
+        </select>
+
+        <button onclick="executarSistema()">
+            Finalizar Venda
+        </button>
+
+    </section>
+
+    <section class="cadastrovip" id="cadastro" style="display:none">
+        <section class="cadastrovip" id="cadastro" style="display:none">
+
+            <h3>💎 Cadastro VIP 💎</h3>
+            <input type="text" id="nomevip" placeholder="Nome">
+            <input type="number" id="idadevip" placeholder="Idade">
+            <input type="email" id="emailvip" placeholder="Email">
+            <input type="text" id="cpfvip" placeholder="CPF">        
+            <button onclick="voltarFormulario()">
+                Voltar
+            </button>
+            <button onclick="executarCadastro()">
+                Cadastrar
+            </button>
         </section>
+        <button onclick="voltarFormulario()">
+            Voltar
+        </button>
 
-        <section class="cadastrovip" id="cadastro" style="display: none">
+    </section>
 
-            <h3 id="tituloCadastro">💎Cadastro Vip💎:</h3>
-            <input type="text" id="nomevip" placeholder="Nome do Cliente">
-            <input type="number" id="idadevip" placeholder="Idade do Cliente">
-            <input type="text" id="emailvip" placeholder="Email do Cliente">
-            <input type="number" id="cpfvip" placeholder="CPF do Cliente">
+    <hr>
 
-            <button id="trocarPagina" onclick="voltarFormulario()" id="botaoVoltar">Não deseja se cadastrar? Clique aqui!</button>
+    <section id="feedback">
 
-            <button onclick="executarCadastro()" id="botaoCadastro">Cadastrar</button>
+        <p id="mensagem-autorizacao">
+            Preencha os dados acima.
+        </p>
 
-        </section>
+        <ul id="lista-estoque"></ul>
 
-        <hr>
+        <div id="relatorio-final" class="card" style="display:none"></div>
 
-        <section id="feedback">
-            <p id="mensagem-autorizacao">Preencha os dados acima.</p>
-            <ul id="lista-estoque"></ul>
-            <div id="relatorio-final" class = "card" style="display: none;">
+    </section>
 
-            </div>
+</div>
 
-        </section>
+<script src="script.js"></script>
 
-    </div>
-
-    <script src="script.js"></script>    
 </body>
 </html>
-
-

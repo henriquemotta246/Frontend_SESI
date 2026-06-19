@@ -4,6 +4,9 @@ function executarSistema(){
     const idade = parseInt(document.getElementById("inputIdade").value);
     const valor = parseFloat(document.getElementById("inputValor").value);
     const cupom = document.getElementById("inputCupom").value === "true";
+    
+    localStorage.setItem("name", nome);
+    localStorage.getItem("name");
 
     //  Dados de saída
     const msg = document.getElementById("mensagem-autorizacao");
@@ -43,7 +46,9 @@ function executarSistema(){
     Cliente:  R$ ${(nome)} <br>
     Total Original: R$ ${valor.toFixed(2)} <br>
     <strong> Total com Desconto: R$ ${valorFinal.toFixed(2)} <\strong>
+    
     `;
+
     }else{ 
         msg .innerHTML = "Venda bloqueada: Menor de 16 anos.";
         msg.style.color = "#ff4444";
